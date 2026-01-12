@@ -258,8 +258,10 @@ Demonstrates production-grade web development practices: WCAG 2.1 AA accessibili
       { label: 'TypeScript', value: 'Strict' },
     ],
     screenshots: [
-      '/assets/portfolio-site/portfolio-site-1.png',
-      '/assets/portfolio-site/portfolio-site-2.png',
+      '/assets/portfolio-site/portfolio-site-landing.png',
+      '/assets/portfolio-site/portfolio-site-projects.png',
+      '/assets/portfolio-site/portfolio-site-about.png',
+      '/assets/portfolio-site/portfolio-site-contact.png',
     ],
     year: 2026,
   },
