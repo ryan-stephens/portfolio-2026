@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/content/projects';
 
@@ -8,6 +8,11 @@ type Category = 'all' | 'ai-ml' | 'full-stack' | 'hybrid';
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const categories: Array<{ id: Category; label: string }> = [
     { id: 'all', label: 'All Projects' },
