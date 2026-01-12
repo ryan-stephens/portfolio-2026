@@ -20,7 +20,16 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-50 focus:bg-primary focus:text-background focus:px-4 focus:py-2 focus:rounded-b-lg"
+      >
+        Skip to main content
+      </a>
+
+      <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md" aria-label="Main navigation">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -71,5 +80,6 @@ export default function Navigation() {
         )}
       </div>
     </nav>
+    </>
   );
 }

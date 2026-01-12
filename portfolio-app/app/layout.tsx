@@ -48,7 +48,7 @@ export default function RootLayout({
       </head>
       <body className="flex flex-col min-h-screen bg-gradient-to-br from-background via-background to-slate-900">
         <Navigation />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" role="main">
           {children}
         </main>
         <Footer />

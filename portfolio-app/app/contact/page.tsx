@@ -73,11 +73,11 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass rounded-lg p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="glass rounded-lg p-8 space-y-6" noValidate>
             {/* Name Field */}
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-medium text-foreground">
-                Name
+                Name <span aria-label="required">*</span>
               </label>
               <input
                 type="text"
@@ -86,7 +86,9 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                aria-required="true"
+                aria-describedby="name-error"
+                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-colors"
                 placeholder="Your name"
               />
             </div>
@@ -94,7 +96,7 @@ export default function ContactPage() {
             {/* Email Field */}
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-foreground">
-                Email
+                Email <span aria-label="required">*</span>
               </label>
               <input
                 type="email"
@@ -103,7 +105,9 @@ export default function ContactPage() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                aria-required="true"
+                aria-describedby="email-error"
+                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-colors"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -111,7 +115,7 @@ export default function ContactPage() {
             {/* Message Field */}
             <div className="space-y-2">
               <label htmlFor="message" className="block text-sm font-medium text-foreground">
-                Message
+                Message <span aria-label="required">*</span>
               </label>
               <textarea
                 id="message"
@@ -119,22 +123,34 @@ export default function ContactPage() {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                aria-required="true"
+                aria-describedby="message-error"
                 rows={6}
-                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-colors resize-none"
                 placeholder="Tell me about your project or opportunity..."
               />
             </div>
 
             {/* Status Messages */}
             {status === 'success' && (
-              <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-400">
+              <div 
+                className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-400"
+                role="alert"
+                aria-live="polite"
+                aria-atomic="true"
+              >
                 <p className="font-semibold">Message sent successfully!</p>
                 <p className="text-sm">I'll get back to you as soon as possible.</p>
               </div>
             )}
 
             {status === 'error' && (
-              <div className="p-4 rounded-lg bg-red-500/20 border border-red-500/30 text-red-400">
+              <div 
+                className="p-4 rounded-lg bg-red-500/20 border border-red-500/30 text-red-400"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
                 <p className="font-semibold">Error sending message</p>
                 <p className="text-sm">{errorMessage}</p>
               </div>
@@ -144,7 +160,8 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-busy={status === 'loading'}
+              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
               {status === 'loading' ? 'Sending...' : 'Send Message'}
             </button>

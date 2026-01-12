@@ -11,10 +11,14 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, featured = false }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${project.id}`}>
-      <div className={`group glass rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col ${
-        featured ? 'md:col-span-2' : ''
-      }`}>
+    <Link href={`/projects/${project.id}`} className="group">
+      <div 
+        className={`glass rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col focus-within:ring-2 focus-within:ring-primary/50 ${
+          featured ? 'md:col-span-2' : ''
+        }`}
+        role="article"
+        aria-label={`${project.title} project`}
+      >
         {/* Image Placeholder */}
         <div className="relative w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300" />
