@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Project } from '@/content/projects';
 import { ArrowRight, Github, ExternalLink } from 'lucide-react';
 
@@ -19,15 +20,25 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
         role="article"
         aria-label={`${project.title} project`}
       >
-        {/* Image Placeholder */}
-        <div className="relative w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300" />
-          <div className="relative text-center z-10">
-            <div className="text-4xl font-bold gradient-text mb-2">
-              {project.title.split(' ')[0][0]}
+        {/* Image */}
+        <div className="relative w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+          {project.screenshots.length > 0 ? (
+            <Image
+              src={project.screenshots[0]}
+              alt={`${project.title} screenshot`}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <div className="text-center">
+                <div className="text-4xl font-bold gradient-text mb-2">
+                  {project.title.split(' ')[0][0]}
+                </div>
+                <p className="text-sm text-muted-foreground">{project.category}</p>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">{project.category}</p>
-          </div>
+          )}
         </div>
 
         {/* Content */}

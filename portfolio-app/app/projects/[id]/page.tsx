@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import SkillBadge from '@/components/SkillBadge';
+import ScreenshotSlideshow from '@/components/ScreenshotSlideshow';
 import { getProjectById, projects } from '@/content/projects';
 
 interface ProjectDetailPageProps {
@@ -98,6 +99,19 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </p>
         </div>
       </section>
+
+      {/* Screenshots Slideshow */}
+      {project.screenshots.length > 0 && (
+        <section className="px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h2 className="text-2xl font-bold text-foreground">Screenshots</h2>
+            <ScreenshotSlideshow
+              screenshots={project.screenshots}
+              projectTitle={project.title}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Highlights */}
       {project.highlights.length > 0 && (
