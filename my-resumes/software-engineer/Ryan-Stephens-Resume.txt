@@ -1,0 +1,218 @@
+RYAN STEPHENS
+Senior Software Engineer
+
+ryan.stephens15@gmail.com
+712-310-3735
+https://ryan-stephens.dev/
+Omaha, NE
+
+Summary
+======
+Senior Full-Stack Software Engineer with 10+ years delivering production applications across healthcare, transportation, and SaaS domains, with growing expertise in AI Engineering and production LLM systems. Proven expertise in Angular, TypeScript, .NET/C#, Node.js, Python, and modern cloud infrastructure (AWS, Azure), with hands-on experience building HIPAA-compliant healthcare systems and enterprise transportation management platforms.
+
+Actively building AI Engineering skills through production side projects including a medical data extraction platform, RAG chatbots, and a self-hosted AI infrastructure template with MLOps best practices. Specialized in AI-augmented development using Windsurf, Cursor, and Claude Code to rapidly adapt to new frameworks. Technical expertise includes microservices architecture, Kubernetes, Docker, Kafka, PostgreSQL, REST/gRPC/GraphQL APIs, and CI/CD pipelines. Strong individual contributor with a quality-first mindset, proven ability to work autonomously, and experience mentoring developers. Remote-first engineer who excels at independent problem-solving while collaborating effectively with cross-functional teams.
+
+
+PROFESSIONAL EXPERIENCE
+======
+Senior Software Engineer
+KBX Technology Solutions | Koch
+08/2021 - 11/2025
+Remote
+Contributed to a major legacy-to-modern platform transformation, developing TMS 2.0 as a scalable SaaS application using Angular, TypeScript, .NET/C#, and cloud-native technologies (Kubernetes, Kafka, ArgoCD, Docker). Built multiple business-critical tools including bid analysis, order management, and competitive pricing systems while managing weekly production deployments via CI/CD pipelines (GitHub Actions). Technical work spanned full-stack development including microservices architecture, gRPC APIs, PostgreSQL/MongoDB databases, state management (NGRX), and responsive UI development with Angular Material, while maintaining high code quality through comprehensive unit testing (Karma, Jasmine) and contributing to technical decision-making.
+ - Developed full-stack features for TMS 2.0 platform using Angular, TypeScript, .NET/C#, and microservices architecture, contributing to legacy-to-modern transformation supporting scalable SaaS operations.
+ - Built business-critical applications including bid analysis tool, order management system, and competitive pricing engine, delivering end-to-end solutions from requirements gathering through production deployment.
+ - Managed weekly production and pre-production deployments using CI/CD pipelines (GitHub Actions), coordinating releases, host configurations, and system status updates to ensure reliable delivery.
+ - Implemented cloud-native infrastructure using Kubernetes, Docker, Kafka, and ArgoCD, enabling scalable microservices deployment and real-time data processing capabilities.
+ - Developed responsive, mobile-first UI components using Angular Material, NGRX state management, and RxJS, ensuring consistent user experience across devices.
+ - Built RESTful and gRPC APIs with .NET/C# backend services, integrating with PostgreSQL and MongoDB databases to support high-volume transaction processing.
+ - Maintained code quality through comprehensive unit testing (Karma, Jasmine), code reviews, and adherence to software engineering best practices across greenfield and legacy applications.
+ - Enhanced system observability by implementing DataDog monitoring across production environments, improving reliability and enabling proactive issue detection.
+ - Utilized LaunchDarkly feature flags to enable controlled rollouts and A/B testing, reducing deployment risk and enabling rapid iteration.
+ - Collaborated with cross-functional teams including product, QA, and operations to deliver features aligned with business objectives and customer requirements.
+ - Mentored junior developers on best practices for TypeScript, Angular architecture, and code quality.
+
+Advanced Programmer Analyst
+QAT Global
+01/2017 - 07/2021
+Remote
+Progressed from QA Engineer to Advanced Programmer Analyst across 9+ years, contributing to HIPAA-compliant healthcare applications including a risk assessment platform for healthcare insurance and Vitalistics, a home sleep apnea testing system. Developed full-stack solutions using .NET/C#, built automated test suites with Selenium, and established secure AWS cloud desktop infrastructure enabling HIPAA-compliant remote access for medical professionals analyzing patient reports.
+ - Developed HIPAA-compliant healthcare applications using .NET/C# including a risk assessment platform for healthcare insurance and Vitalistics, a home sleep apnea testing system connecting patients with medical providers.
+ - Architected and deployed secure AWS cloud desktop infrastructure (Amazon WorkSpaces) enabling HIPAA-compliant remote access for physicians to analyze patient sleep study reports while maintaining data security and privacy compliance.
+ - Migrated enterprise .NET application from AWS to Azure as the sole developer, reducing annual hosting and infrastructure costs by over $12,000 while maintaining zero downtime during transition.
+ - Built automated test suites using Selenium for cross-browser compatibility testing, ensuring application quality and standardization across healthcare risk assessment platform.
+ - Developed REST APIs using ASP.NET integrated with SQL Server databases, creating secure backend services consumed by Angular front-end applications via HttpClient.
+ - Optimized Angular application performance through lazy loading, route optimization, and module structuring, while implementing static site generation using Scully for faster page loads.
+ - Established Angular coding standards and best practices enforced through CI/CD pipeline scripts (Azure DevOps), automatically blocking non-compliant code commits to maintain code quality.
+ - Coordinated with offshore development teams to deliver full-stack features, managing requirements and code through Azure DevOps with daily Scrum ceremonies.
+ - Maintained Windows Forms applications integrated with existing .NET systems, ensuring HIPAA compliance and secure handling of protected health information (PHI).
+ - Built and managed Azure CI/CD pipelines for automated testing, build validation, and deployment across development, staging, and production environments.
+
+Intern
+QAT Global
+05/2012 - 12/2016
+Omaha, NE
+Began career as QA Engineering Intern, building foundational skills in software testing, test automation, and healthcare application development. Created comprehensive manual test suites for HIPAA-compliant risk assessment platform, then automated testing workflows using Selenium, establishing early expertise that led to progression into full-stack development roles.
+ - Created comprehensive test cases and designed testing workflows for HIPAA-compliant healthcare risk assessment application, documenting process flows and application logic to guide manual QA testing.
+ - Performed manual functional and regression testing across web applications, identifying bugs and working with development team to ensure quality standards before production releases.
+ - Provided IT infrastructure support including employee workstation setup and onboarding, network administration, server management, and general office security maintenance.
+ - Assisted accounting department with operational tasks and collected marketing research data to support business development initiatives.
+ - Documented complex application workflows and system integrations, creating visual process maps that improved team understanding of SaaS insurance platform architecture.
+
+IT Technician
+Iowa State University
+08/2014 - 08/2015
+Ames, IA
+Progressed from IT support technician to head technician, managing workstation maintenance, security, and software imaging for Iowa State University IT infrastructure. Provided technical support to students and faculty while taking on increasing responsibility for system configuration, hardware troubleshooting, and standardized software deployment.
+ - Provided technical support for over 3,000 computer systems campus-wide, troubleshooting hardware and software issues across Windows and Mac operating systems.
+ - Managed workstation deployment processes, including system imaging, disk encryption, security configuration, and standardized software installation for new and retiring equipment.
+ - Advanced to the head technician role, overseeing system maintenance standards, security protocols, and software image management for university IT infrastructure.
+ - Delivered responsive customer service to students, faculty, and staff while managing high-volume support tickets and maintaining SLA compliance.
+
+
+Education
+======
+Bachelor of Science in Management Information Systems
+3.3
+Iowa State University of Science and Technology
+2012 - 2016
+Ames, IA
+
+
+SKILLS
+======
+Gen AI
+ - GitHub Copilot
+ - Windsurf
+ - Cursor
+ - Claude Code
+ - Cline
+ - OpenAI API
+ - Prompt Engineering
+ - AI Agents
+ - RAG
+ - AI-Augmented Development
+ - Evals
+
+Front-End
+ - React
+ - Next.js
+ - Typescript
+ - Angular
+ - Javascript
+ - HTML
+ - CSS
+ - TailwindCSS
+ - RxJS
+ - NgRX
+ - Responsive Design
+ - Playwright
+ - Vite
+ - Webpack
+ - SEO Optimization
+
+Back-End
+ - Node.js
+ - NestJS
+ - Express.js
+ - Typescript
+ - .NET
+ - C#
+ - Python
+ - Rest APIs
+ - gRPC APIs
+ - GraphQL
+ - Microservices
+ - Prisma ORM
+ - Entity Framework
+
+Databases
+ - PostgreSQL
+ - MongoDB
+ - Redis
+ - SQL Server
+ - MySQL
+ - Prisma
+ - TypeORM
+ - Database Design & Optimization
+ - SQL & NoSQL
+
+Infrastructure & DevOps
+ - Docker
+ - Kubernetes
+ - AWS
+ - Azure
+ - GitHub Actions
+ - CI/CD Pipelines
+ - Terraform
+ - Nginx
+ - Serverless Architecture
+ - Cloud-Native Development
+
+Testing & Quality
+ - Jest
+ - Playwright
+ - Cypress
+ - Karma/Jasmine
+ - Unit Testing
+ - Integration Testing
+ - E2E Testing
+
+Tools & Other
+ - Git
+ - GitHub
+ - VS Code
+ - Postman
+ - Swagger/OpenAPI
+ - DataDog
+ - Agile/Scrum
+ - SOLID Principles
+ - Design Patterns
+ - Code Reviews
+ - Feature Flags
+ - API Design
+ - Performance Optimization
+ - Security Best Practices
+
+
+MY PROJECTS
+======
+SpeakEasy - AI Integrated Desktop Application
+Production Electron desktop app enabling hands-free coding with AI voice commands. 
+Implemented speech-to-text, context-aware file injection, and real-time AI communication.
+Tech Stack: Electron, Next.js, TypeScript, PostgreSQL (Prisma), Docker, Stripe, Playwright Features: Voice-to-code, file context awareness, subscription management, cross-platform🔗 https://speakeasydev.com/
+
+Scrum Scramble - Agile Real-Time Pointing Tool
+
+Built a real-time collaborative story pointing application for distributed agile teams. Enables simultaneous voting, instant estimate reveals, and faster consensus. ROI: $12.5K+ annual savings per team.
+
+Tech Stack: Next.js, TypeScript, WebSockets, PostgreSQL, Docker, TailwindCSS
+
+Features: Real-time collaboration, anonymous voting, session persistence, mobile-responsive
+
+🔗 https://scrumscram.com/
+
+Developer Portfolio
+Modern portfolio website showcasing technical projects, skills, and professional experience. Built for performance and user experience using Astro static site generation, TypeScript, Tailwind CSS, and Docker deployment.
+
+
+🔗 https://ryan-stephens.dev/
+
+
+WHAT I'M PROUD OF
+======
+My Decision Making Skills
+Strong at evaluating technology tradeoffs and selecting the right tools for each challenge. Whether choosing between REST vs. gRPC, evaluating state management solutions, or deciding on deployment strategies, I research thoroughly and make pragmatic decisions that balance technical excellence with business needs.
+
+My Focus & Persistence
+Known for driving complex projects to completion despite technical challenges. Successfully migrated QAT's enterprise .NET application from AWS to Azure solo with zero downtime, and managed weekly TMS 2.0 production deployments at KBX across microservices with tight deadlines and rollback scenarios. I don't give up when encountering obstacles - I research solutions, leverage AI tools, and persist until delivering quality results.
+
+
+References
+======
+KBX - Stewart Sweet, Team Lead
+
+KBX - Sunil Khandwala, Senior SWE
+
+KBX - Ryan Clouse, Senior SWE
+
