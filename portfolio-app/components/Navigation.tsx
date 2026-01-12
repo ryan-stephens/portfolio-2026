@@ -36,17 +36,19 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center hover:opacity-80 transition-opacity rounded-lg overflow-hidden"
+            className="flex items-center hover:opacity-80 transition-opacity"
             aria-label="Ryan Stephens - Home"
           >
-            <Image
-              src="/assets/ryan-stephens-400x524.webp"
-              alt="Ryan Stephens"
-              width={40}
-              height={52}
-              className="h-10 w-auto"
-              priority
-            />
+            <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/assets/ryan-stephens-400x524.webp"
+                alt="Ryan Stephens"
+                width={40}
+                height={52}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
