@@ -55,9 +55,8 @@ The template features a compositional prompt architecture, domain-agnostic evalu
       'Production-ready infrastructure',
     ],
     metrics: [
-      { label: 'Services', value: '10' },
-      { label: 'Completion', value: '85%' },
-      { label: 'Uptime', value: '99.9%' },
+      { label: 'Microservices', value: '10' },
+      { label: 'Completion', value: '65%' },
     ],
     screenshots: [
       '/projects/ai-infrastructure-1.png',
@@ -105,9 +104,8 @@ Implements enterprise-level MLOps practices including systematic evaluation fram
       'Schema-driven architecture',
     ],
     metrics: [
-      { label: 'Interaction Types', value: '2' },
       { label: 'Agent Tools', value: '8' },
-      { label: 'Evaluation Matchers', value: '5+' },
+      { label: 'Interaction Types', value: '2' },
     ],
     screenshots: [
       '/projects/medextract-1.png',
@@ -154,9 +152,8 @@ Features push-to-talk voice recording with hotkey activation, OpenAI Whisper API
       'Multi-device license binding',
     ],
     metrics: [
-      { label: 'Test Coverage', value: '298 E2E' },
-      { label: 'Pass Rate', value: '100%' },
-      { label: 'Pricing Tiers', value: '3' },
+      { label: 'E2E Tests', value: '298' },
+      { label: 'Test Pass Rate', value: '100%' },
     ],
     screenshots: [
       '/projects/speakeasy-1.png',
@@ -201,8 +198,7 @@ Built with TypeScript, Node.js, and Directus headless CMS, it features intellige
     ],
     metrics: [
       { label: 'Classification Accuracy', value: '85%' },
-      { label: 'Monthly Cost', value: '$5-10' },
-      { label: 'Thoughts Captured', value: '500+' },
+      { label: 'Open Source', value: 'MIT' },
     ],
     screenshots: [
       '/projects/second-brain-1.png',
@@ -242,9 +238,8 @@ Features a dual-focus positioning with 50/50 balance between Software Engineerin
       'WCAG AA accessibility compliance',
     ],
     metrics: [
-      { label: 'Pages', value: '5+' },
-      { label: 'Projects', value: '5' },
-      { label: 'Skill Categories', value: '7' },
+      { label: 'WCAG AA', value: 'Compliant' },
+      { label: 'TypeScript', value: 'Strict' },
     ],
     screenshots: [
       '/projects/portfolio-1.png',
