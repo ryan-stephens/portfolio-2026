@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -35,9 +36,17 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity rounded-lg overflow-hidden"
+            aria-label="Ryan Stephens - Home"
           >
-            RS
+            <Image
+              src="/assets/ryan-stephens-400x524.webp"
+              alt="Ryan Stephens"
+              width={40}
+              height={52}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
