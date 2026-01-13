@@ -156,40 +156,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="glass rounded-lg p-8 md:p-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
-                  10+
-                </div>
-                <p className="text-sm text-muted-foreground">Years Experience</p>
-              </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
-                  5
-                </div>
-                <p className="text-sm text-muted-foreground">Major Projects</p>
-              </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
-                  70+
-                </div>
-                <p className="text-sm text-muted-foreground">Technologies</p>
-              </div>
-              <div>
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
-                  7
-                </div>
-                <p className="text-sm text-muted-foreground">Skill Categories</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
