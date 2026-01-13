@@ -23,6 +23,8 @@ services:
       start_period: 40s
     labels:
       - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
+      - "traefik.http.routers.portfolio-http.service=portfolio"
+      - "traefik.http.routers.portfolio-https.service=portfolio"
 
 networks:
   coolify:
