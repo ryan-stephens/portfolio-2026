@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "3011:3011"
+      - "80"
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_SITE_URL=https://ryan-stephens.dev
@@ -20,6 +20,13 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`ryan-stephens.dev`)"
+      - "traefik.http.routers.portfolio.entrypoints=https"
+      - "traefik.http.routers.portfolio.tls=true"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
 
 networks:
   coolify:
