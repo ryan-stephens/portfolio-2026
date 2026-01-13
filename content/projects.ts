@@ -13,6 +13,7 @@ export interface Project {
   highlights: string[];
   metrics?: Array<{ label: string; value: string }>;
   year: number;
+  order: number;
 }
 
 export const projects: Project[] = [
@@ -70,6 +71,7 @@ Features a compositional prompt architecture with auto-versioning, systematic ev
       '/assets/ai-engineer-template/ai-engineer-template-pulse.webp',
     ],
     year: 2024,
+    order: 3,
   },
   {
     id: 'medextract',
@@ -123,6 +125,7 @@ Implements enterprise-level MLOps practices: systematic evaluation framework, co
       '/assets/med-extract/med-extract-evolution.webp',
     ],
     year: 2024,
+    order: 2,
   },
   {
     id: 'speakeasy',
@@ -175,6 +178,7 @@ Features push-to-talk voice recording with hotkey activation, OpenAI Whisper API
       '/assets/speak-easy/speak-easy-settings-about.webp',
     ],
     year: 2025,
+    order: 4,
   },
   {
     id: 'second-brain',
@@ -219,6 +223,7 @@ Built with TypeScript, Node.js, and Directus headless CMS. Features intelligent 
       '/assets/second-brain/second-brain-directus.webp',
     ],
     year: 2025,
+    order: 1,
   },
   {
     id: 'portfolio-site',
@@ -264,6 +269,7 @@ Demonstrates production-grade web development practices: WCAG 2.1 AA accessibili
       '/assets/portfolio-site/portfolio-site-contact.webp',
     ],
     year: 2026,
+    order: 5,
   },
 ];
 
@@ -272,10 +278,10 @@ export function getProjectById(id: string): Project | undefined {
 }
 
 export function getFeaturedProjects(): Project[] {
-  return projects.filter((p) => p.featured);
+  return projects.filter((p) => p.featured).sort((a, b) => a.order - b.order);
 }
 
 export function getProjectsByCategory(category: string): Project[] {
-  if (category === 'all') return projects;
-  return projects.filter((p) => p.category === category);
+  const filtered = category === 'all' ? projects : projects.filter((p) => p.category === category);
+  return filtered.sort((a, b) => a.order - b.order);
 }
