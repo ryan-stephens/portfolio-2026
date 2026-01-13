@@ -124,16 +124,6 @@ function ThemeSwitcherContent() {
         </div>
       )}
 
-      {/* Mobile Theme Toggle (Floating) */}
-      <div className="fixed bottom-6 right-6 md:hidden z-40">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-3 rounded-full bg-primary text-background shadow-lg hover:shadow-xl transition-shadow"
-          aria-label="Toggle theme settings"
-        >
-          <Palette size={24} />
-        </button>
-      </div>
     </div>
   );
 }
