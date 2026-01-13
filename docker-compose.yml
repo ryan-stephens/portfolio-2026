@@ -29,7 +29,7 @@ services:
       - "traefik.http.routers.portfolio.entrypoints=https"
       - "traefik.http.routers.portfolio.tls=true"
       - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
-      - "traefik.http.services.portfolio.loadbalancer.server.port=3001"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 
 networks:
