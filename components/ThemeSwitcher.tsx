@@ -23,6 +23,7 @@ function ThemeSwitcherContent() {
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }
+    return undefined;
   }, [isOpen]);
 
   const colorSchemes: ColorScheme[] = ['blue', 'purple', 'cyan', 'emerald', 'rose'];
