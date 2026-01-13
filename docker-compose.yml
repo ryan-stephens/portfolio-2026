@@ -21,6 +21,12 @@ services:
       start_period: 40s
     labels:
       - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-http.rule=Host(`ryan-stephens.dev`)"
+      - "traefik.http.routers.portfolio-http.entrypoints=http"
+      - "traefik.http.routers.portfolio-http.middlewares=redirect-to-https"
+      - "traefik.http.routers.portfolio-https.rule=Host(`ryan-stephens.dev`)"
+      - "traefik.http.routers.portfolio-https.entrypoints=https"
+      - "traefik.http.routers.portfolio-https.tls=true"
+      - "traefik.http.routers.portfolio-https.tls.certresolver=letsencrypt"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
-      - "traefik.http.routers.portfolio-http.service=portfolio"
-      - "traefik.http.routers.portfolio-https.service=portfolio"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
