@@ -22,6 +22,7 @@ services:
       retries: 3
       start_period: 40s
     labels:
+      - "traefik.enable=true"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
       - "traefik.http.routers.portfolio-http.service=portfolio"
       - "traefik.http.routers.portfolio-https.service=portfolio"
