@@ -7,8 +7,6 @@ const contactSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
-type ContactData = z.infer<typeof contactSchema>;
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
