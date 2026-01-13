@@ -24,9 +24,11 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     notFound();
   }
 
-  const currentIndex = projects.findIndex((p) => p.id === project.id);
-  const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  // Sort projects by order to match the display order on projects page
+  const sortedProjects = [...projects].sort((a, b) => a.order - b.order);
+  const currentIndex = sortedProjects.findIndex((p) => p.id === project.id);
+  const previousProject = currentIndex > 0 ? sortedProjects[currentIndex - 1] : null;
+  const nextProject = currentIndex < sortedProjects.length - 1 ? sortedProjects[currentIndex + 1] : null;
 
   return (
     <div className="space-y-12 pb-20">
