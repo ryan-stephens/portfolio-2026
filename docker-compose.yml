@@ -13,8 +13,6 @@ services:
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_SITE_URL=https://ryan-stephens.dev
-    networks:
-      - coolify
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3011"]
       interval: 30s
@@ -26,7 +24,3 @@ services:
       - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
       - "traefik.http.routers.portfolio-http.service=portfolio"
       - "traefik.http.routers.portfolio-https.service=portfolio"
-
-networks:
-  coolify:
-    external: true
