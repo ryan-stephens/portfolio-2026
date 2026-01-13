@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.next/
+
+Sitemap: https://ryan-stephens.dev/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
