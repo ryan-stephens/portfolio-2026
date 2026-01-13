@@ -5,7 +5,7 @@ import { useTheme, type ColorScheme, type ThemeMode } from '@/lib/theme-context'
 import { Moon, Sun, Palette } from 'lucide-react';
 
 function ThemeSwitcherContent() {
-  const { mode, colorScheme, setMode, setColorScheme, isDark } = useTheme();
+  const { mode, colorScheme, setMode, setColorScheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const colorSchemes: ColorScheme[] = ['blue', 'purple', 'cyan', 'emerald', 'rose'];
