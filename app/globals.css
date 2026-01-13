@@ -149,11 +149,13 @@ a, button {
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 3s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  will-change: transform;
 }
 
 .animate-glow-pulse {
-  animation: glow-pulse 2s ease-in-out infinite;
+  animation: glow-pulse 2s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  will-change: box-shadow;
 }
 
 .animate-shimmer {
@@ -164,23 +166,28 @@ a, button {
     transparent
   );
   background-size: 1000px 100%;
-  animation: shimmer 2s infinite;
+  animation: shimmer 2s linear infinite;
+  will-change: background-position;
 }
 
 .animate-slide-in-left {
-  animation: slide-in-left 0.6s ease-out forwards;
+  animation: slide-in-left 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-slide-in-right {
-  animation: slide-in-right 0.6s ease-out forwards;
+  animation: slide-in-right 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-scale-in {
-  animation: scale-in 0.5s ease-out forwards;
+  animation: scale-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-bounce-subtle {
-  animation: bounce-subtle 2s ease-in-out infinite;
+  animation: bounce-subtle 2s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  will-change: transform;
 }
 
 /* Accessibility utilities */

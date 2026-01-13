@@ -15,7 +15,7 @@ export default function Home() {
       <section className="pt-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-6 text-center">
-            <div className="space-y-4 animate-slide-in-left">
+            <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
                 GenAI & Full-Stack
                 <br />
@@ -27,24 +27,24 @@ export default function Home() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/50 transition-all duration-200"
               >
                 View Projects
                 <ArrowRight size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-200"
               >
                 Get in Touch
               </Link>
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-6 pt-4 animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <div className="flex justify-center gap-6 pt-4">
               <a
                 href="https://github.com/ryan-stephens?tab=repositories"
                 target="_blank"
@@ -79,7 +79,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
-            <div className="space-y-2 animate-slide-in-left">
+            <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                 Featured Projects
               </h2>
@@ -94,7 +94,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center pt-4 animate-slide-in-right">
+            <div className="text-center pt-4">
               <Link
                 href="/projects"
                 className="inline-flex items-center gap-2 text-primary hover:text-accent transition-all duration-300 font-semibold hover:gap-3"
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
-            <div className="space-y-2 animate-slide-in-right">
+            <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                 Skills & Expertise
               </h2>
@@ -146,7 +146,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center pt-4 animate-slide-in-left">
+            <div className="text-center pt-4">
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-primary hover:text-accent transition-all duration-300 font-semibold hover:gap-3"
