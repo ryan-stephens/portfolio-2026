@@ -164,7 +164,7 @@ export default function Home() {
               Ready to collaborate?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Whether you're looking to build AI systems, need full-stack development, or want to discuss technology, I'd love to hear from you.
+              Whether you&apos;re looking to build AI systems, need full-stack development, or want to discuss technology, I&apos;d love to hear from you.
             </p>
             <Link
               href="/contact"

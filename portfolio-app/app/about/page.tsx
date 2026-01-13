@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-foreground">Background</h2>
             <p className="text-foreground leading-relaxed">
-              I'm an AI Engineer with 10+ years of software engineering experience, specializing in production LLM applications and MLOps infrastructure. My journey spans from traditional full-stack development to cutting-edge AI systems, combining deep technical expertise with a focus on building reliable, production-grade solutions.
+              I&apos;m an AI Engineer with 10+ years of software engineering experience, specializing in production LLM applications and MLOps infrastructure. My journey spans from traditional full-stack development to cutting-edge AI systems, combining deep technical expertise with a focus on building reliable, production-grade solutions.
             </p>
           </div>
 

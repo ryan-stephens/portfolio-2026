@@ -64,7 +64,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-lg text-muted-foreground">
-              Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+              Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you.
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 aria-atomic="true"
               >
                 <p className="font-semibold">Message sent successfully!</p>
-                <p className="text-sm">I'll get back to you as soon as possible.</p>
+                <p className="text-sm">I&apos;ll get back to you as soon as possible.</p>
               </div>
             )}
 
@@ -232,7 +232,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div className="glass rounded-lg p-6">
               <h3 className="font-semibold text-foreground mb-2">
-                What's the best way to reach you?
+                What&apos;s the best way to reach you?
               </h3>
               <p className="text-muted-foreground text-sm">
                 Email is the most reliable way. I typically respond within 24-48 hours. You can also reach out via LinkedIn or GitHub.
@@ -244,13 +244,13 @@ export default function ContactPage() {
                 Are you available for freelance work?
               </h3>
               <p className="text-muted-foreground text-sm">
-                I'm open to discussing interesting projects. Whether it's building AI systems, full-stack development, or consulting, let's talk about what you have in mind.
+                I&apos;m open to discussing interesting projects. Whether it&apos;s building AI systems, full-stack development, or consulting, let&apos;s talk about what you have in mind.
               </p>
             </div>
 
             <div className="glass rounded-lg p-6">
               <h3 className="font-semibold text-foreground mb-2">
-                What's your typical response time?
+                What&apos;s your typical response time?
               </h3>
               <p className="text-muted-foreground text-sm">
                 I aim to respond to all inquiries within 24-48 hours. For urgent matters, email is your best bet.
@@ -262,7 +262,7 @@ export default function ContactPage() {
                 Do you offer consulting services?
               </h3>
               <p className="text-muted-foreground text-sm">
-                Yes, I'm available for consulting on AI/ML architecture, full-stack development, and DevOps. Feel free to reach out to discuss your specific needs.
+                Yes, I&apos;m available for consulting on AI/ML architecture, full-stack development, and DevOps. Feel free to reach out to discuss your specific needs.
               </p>
             </div>
           </div>
