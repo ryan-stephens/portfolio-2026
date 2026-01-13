@@ -133,7 +133,7 @@ export default function AboutPage() {
               Interested in working together?
             </h2>
             <p className="text-muted-foreground">
-              I'm always open to discussing new projects, opportunities, or ideas.
+              I&apos;m always open to discussing new projects, opportunities, or ideas.
             </p>
             <a
               href="mailto:ryan.stephens15@gmail.com"
