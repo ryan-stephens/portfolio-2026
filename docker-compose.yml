@@ -25,9 +25,3 @@ services:
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
-    networks:
-      - traefik-network
-
-networks:
-  traefik-network:
-    external: true
