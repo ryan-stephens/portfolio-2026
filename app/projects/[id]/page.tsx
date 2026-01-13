@@ -48,7 +48,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium capitalize">
+              <span className="px-3 py-1 rounded-full bg-primary/25 text-primary dark:text-white text-sm font-medium capitalize border border-primary/50">
                 {project.category.replace('-', ' ')}
               </span>
               <span className="text-muted-foreground text-sm">{project.year}</span>
@@ -69,7 +69,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2 rounded-lg bg-primary/20 text-primary hover:bg-primary/30 transition-colors font-semibold"
+                  className="inline-flex items-center gap-2 px-6 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors font-semibold"
                 >
                   <ExternalLink size={18} />
                   Visit Live
@@ -80,7 +80,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2 rounded-lg border border-primary/50 text-primary hover:bg-primary/10 transition-colors font-semibold"
+                  className="inline-flex items-center gap-2 px-6 py-2 rounded-lg border-2 border-primary text-primary hover:bg-primary/10 transition-colors font-semibold"
                 >
                   <Github size={18} />
                   View Code

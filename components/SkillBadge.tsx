@@ -5,9 +5,9 @@ interface SkillBadgeProps {
 }
 
 const variantStyles = {
-  default: 'bg-muted/30 text-muted-foreground border-muted/50 hover:bg-muted/50',
-  primary: 'bg-primary/20 text-primary border-primary/30 hover:bg-primary/30',
-  accent: 'bg-accent/20 text-accent border-accent/30 hover:bg-accent/30',
+  default: 'bg-muted/40 text-foreground border-muted/60 hover:bg-muted/50',
+  primary: 'bg-primary/25 text-primary dark:text-white border-primary/50 hover:bg-primary/35',
+  accent: 'bg-accent/25 text-accent dark:text-white border-accent/50 hover:bg-accent/35',
 };
 
 const sizeStyles = {

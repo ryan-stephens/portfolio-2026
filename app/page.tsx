@@ -15,11 +15,11 @@ export default function Home() {
       <section className="pt-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-6 text-center">
-            <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                <span className="gradient-text">GenAI & Full-Stack</span>
+            <div className="space-y-4 animate-slide-in-left">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
+                GenAI & Full-Stack
                 <br />
-                <span className="text-foreground">Engineer</span>
+                Engineer
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Building production-grade AI systems and modern web applications. Specializing in LLMs, MLOps, and scalable infrastructure.
@@ -27,29 +27,29 @@ export default function Home() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
               >
                 View Projects
                 <ArrowRight size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg border border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 Get in Touch
               </Link>
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-6 pt-4">
+            <div className="flex justify-center gap-6 pt-4 animate-scale-in" style={{ animationDelay: '0.4s' }}>
               <a
                 href="https://github.com/ryan-stephens?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1"
                 aria-label="GitHub"
               >
                 <Github size={24} />
@@ -58,14 +58,14 @@ export default function Home() {
                 href="https://www.linkedin.com/in/ryan-stephens-4a518359/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href="mailto:ryan.stephens15@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1"
                 aria-label="Email"
               >
                 <Mail size={24} />
@@ -79,7 +79,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
-            <div className="space-y-2">
+            <div className="space-y-2 animate-slide-in-left">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                 Featured Projects
               </h2>
@@ -94,10 +94,10 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center pt-4">
+            <div className="text-center pt-4 animate-slide-in-right">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors font-semibold"
+                className="inline-flex items-center gap-2 text-primary hover:text-accent transition-all duration-300 font-semibold hover:gap-3"
               >
                 View All Projects
                 <ArrowRight size={20} />
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
-            <div className="space-y-2">
+            <div className="space-y-2 animate-slide-in-right">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                 Skills & Expertise
               </h2>
@@ -122,7 +122,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {displayedCategories.map((category) => (
-                <div key={category.name} className="glass rounded-lg p-6">
+                <div
+                  key={category.name}
+                  className="glass rounded-lg p-6 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                >
                   <h3 className="text-lg font-bold text-foreground mb-4">
                     {category.name}
                   </h3>
@@ -143,10 +146,10 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center pt-4">
+            <div className="text-center pt-4 animate-slide-in-left">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors font-semibold"
+                className="inline-flex items-center gap-2 text-primary hover:text-accent transition-all duration-300 font-semibold hover:gap-3"
               >
                 View All Skills
                 <ArrowRight size={20} />
@@ -159,7 +162,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="glass rounded-lg p-12 text-center space-y-6">
+          <div className="glass rounded-lg p-12 text-center space-y-6 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               Ready to collaborate?
             </h2>
@@ -168,7 +171,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
             >
               Send me a message
               <ArrowRight size={20} />

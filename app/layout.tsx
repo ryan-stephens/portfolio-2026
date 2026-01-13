@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { ThemeProvider } from '@/lib/theme-context';
 
 export const metadata: Metadata = {
   title: 'Ryan Stephens - GenAI & Full-Stack Engineer | AI/ML Portfolio',
@@ -105,7 +106,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,13 +115,29 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const mode = localStorage.getItem('theme-mode') || 'system';
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const isDark = mode === 'dark' || (mode === 'system' && prefersDark);
+                if (isDark) {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
-      <body className="flex flex-col min-h-screen bg-gradient-to-br from-background via-background to-slate-900">
-        <Navigation />
-        <main id="main-content" className="flex-1" role="main">
-          {children}
-        </main>
-        <Footer />
+      <body className="flex flex-col min-h-screen bg-background">
+        <ThemeProvider>
+          <Navigation />
+          <main id="main-content" className="flex-1" role="main">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

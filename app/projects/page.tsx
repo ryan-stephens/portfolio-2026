@@ -43,7 +43,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                   activeCategory === category.id
-                    ? 'bg-gradient-to-r from-primary to-accent text-background'
+                    ? 'bg-primary text-white hover:bg-primary/90'
                     : 'border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary/50'
                 }`}
               >

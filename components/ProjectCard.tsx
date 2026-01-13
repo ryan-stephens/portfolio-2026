@@ -21,12 +21,13 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
         aria-label={`${project.title} project`}
       >
         {/* Image */}
-        <div className="relative w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+        <div className="relative w-full h-48 bg-muted/20 overflow-hidden">
           {project.screenshots.length > 0 ? (
             <Image
               src={project.screenshots[0]}
               alt={`${project.title} screenshot`}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
           ) : (
@@ -56,13 +57,13 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
               {project.techStack.slice(0, 3).map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs px-2 py-1 rounded-full bg-primary/20 text-primary border border-primary/30"
+                  className="text-xs px-2 py-1 rounded-full bg-primary/25 text-primary dark:text-white border border-primary/50"
                 >
                   {tech}
                 </span>
               ))}
               {project.techStack.length > 3 && (
-                <span className="text-xs px-2 py-1 rounded-full bg-muted/20 text-muted-foreground">
+                <span className="text-xs px-2 py-1 rounded-full bg-muted/40 text-foreground border border-muted/60">
                   +{project.techStack.length - 3} more
                 </span>
               )}
@@ -72,28 +73,30 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
           {/* Links */}
           <div className="flex gap-2 pt-4 border-t border-border">
             {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-2 text-xs text-primary hover:text-accent transition-colors"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.open(project.liveUrl, '_blank');
+                }}
+                className="flex items-center gap-1 text-xs px-2 py-1 rounded bg-primary/25 text-primary dark:text-white border border-primary/50 hover:bg-primary/35 transition-colors cursor-pointer font-medium"
               >
-                <ExternalLink size={16} />
+                <ExternalLink size={14} />
                 Live
-              </a>
+              </button>
             )}
             {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-2 text-xs text-primary hover:text-accent transition-colors"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  window.open(project.githubUrl, '_blank');
+                }}
+                className="flex items-center gap-1 text-xs px-2 py-1 rounded bg-primary/25 text-primary dark:text-white border border-primary/50 hover:bg-primary/35 transition-colors cursor-pointer font-medium"
               >
-                <Github size={16} />
+                <Github size={14} />
                 Code
-              </a>
+              </button>
             )}
             <div className="flex-1" />
             <div className="flex items-center gap-1 text-xs text-muted-foreground group-hover:text-primary transition-colors">

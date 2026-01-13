@@ -44,6 +44,7 @@ export default function ScreenshotSlideshow({
             src={screenshots[currentIndex]}
             alt={`${projectTitle} screenshot ${currentIndex + 1}`}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
             className="object-cover"
             priority
           />
@@ -93,6 +94,7 @@ export default function ScreenshotSlideshow({
                 src={screenshot}
                 alt={`${projectTitle} thumbnail ${index + 1}`}
                 fill
+                sizes="80px"
                 className="object-cover"
               />
             </button>
