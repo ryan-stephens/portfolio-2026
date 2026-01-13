@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     ports:
       - "80"
+      - "3011"
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_SITE_URL=https://ryan-stephens.dev
