@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -83,7 +81,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Ryan Stephens. All rights reserved. Built with Next.js, TailwindCSS, and deployed on VPS.
+            © 2026 Ryan Stephens. All rights reserved. Built with Next.js, TailwindCSS, and deployed on VPS.
           </p>
         </div>
       </div>
