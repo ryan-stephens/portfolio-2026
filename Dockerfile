@@ -24,10 +24,10 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy package files for next start
-COPY --from=builder --chown=nextjs:nodejs /app/package.json /app/package-lock.json* ./
-# Copy build output
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+# Copy standalone build output - this includes server.js
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+# Copy static files
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Copy public files
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
@@ -38,4 +38,4 @@ EXPOSE 3011
 ENV PORT=3011
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["npm", "start"]
+CMD ["node", ".next/standalone/server.js"]
