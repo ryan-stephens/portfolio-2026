@@ -21,6 +21,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    labels:
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3011"
 
 networks:
   coolify:
