@@ -24,12 +24,12 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy standalone build output to root
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-# Copy static files
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# Copy the entire .next directory from builder
+COPY --from=builder --chown=nextjs:nodejs /app/.next /app/.next
 # Copy public files
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/public /app/public
+# Copy package files for dependencies
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules /app/node_modules
 
 USER nextjs
 
@@ -38,7 +38,4 @@ EXPOSE 3011
 ENV PORT=3011
 ENV HOSTNAME="0.0.0.0"
 
-# Debug: List the contents to verify server.js exists
-RUN ls -la /app/ || true
-
-CMD ["node", "server.js"]
+CMD ["node", "/app/.next/standalone/server.js"]
