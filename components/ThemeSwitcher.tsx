@@ -1,12 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTheme, type ColorScheme, type ThemeMode } from '@/lib/theme-context';
 import { Moon, Sun, Palette } from 'lucide-react';
 
 function ThemeSwitcherContent() {
   const { mode, colorScheme, setMode, setColorScheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Handle click outside to close menu
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [isOpen]);
 
   const colorSchemes: ColorScheme[] = ['blue', 'purple', 'cyan', 'emerald', 'rose'];
   const themeModes: ThemeMode[] = ['light', 'dark', 'system'];
@@ -34,7 +51,7 @@ function ThemeSwitcherContent() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative" ref={menuRef}>
       {/* Theme Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
