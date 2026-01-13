@@ -2,16 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -88,7 +83,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        {mounted && isOpen && (
+        {isOpen && (
           <div className="md:hidden border-t border-border py-4 space-y-2">
             {navItems.map((item) => (
               item.external ? (
