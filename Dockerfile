@@ -24,7 +24,7 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy standalone build output - this includes server.js
+# Copy standalone build output to root
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 # Copy static files
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
@@ -38,4 +38,4 @@ EXPOSE 3011
 ENV PORT=3011
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", ".next/standalone/server.js"]
+CMD ["node", "server.js"]
