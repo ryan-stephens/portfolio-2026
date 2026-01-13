@@ -79,7 +79,7 @@ function ThemeSwitcherContent() {
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     mode === themeMode
                       ? 'bg-primary text-background'
-                      : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                      : 'bg-muted text-foreground hover:bg-muted/80 hover:text-foreground'
                   }`}
                 >
                   {themeMode === 'light' && <Sun size={16} className="mx-auto mb-1" />}
@@ -117,7 +117,7 @@ function ThemeSwitcherContent() {
           {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full px-3 py-2 rounded-lg bg-muted text-muted-foreground hover:bg-muted/80 text-sm font-medium transition-all"
+            className="w-full px-3 py-2 rounded-lg bg-muted text-foreground hover:bg-muted/80 text-sm font-medium transition-all"
           >
             Done
           </button>
