@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -14,22 +14,9 @@ export default function ScreenshotSlideshow({
   projectTitle,
 }: ScreenshotSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!screenshots || screenshots.length === 0) {
     return null;
-  }
-
-  if (!mounted) {
-    return (
-      <div className="relative w-full bg-card rounded-lg overflow-hidden border border-border">
-        <div className="relative aspect-video bg-muted animate-pulse" />
-      </div>
-    );
   }
 
   const goToPrevious = () => {
