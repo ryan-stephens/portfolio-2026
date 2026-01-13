@@ -38,4 +38,7 @@ EXPOSE 3011
 ENV PORT=3011
 ENV HOSTNAME="0.0.0.0"
 
+# Debug: List the contents to verify server.js exists
+RUN ls -la /app/ || true
+
 CMD ["node", "server.js"]
