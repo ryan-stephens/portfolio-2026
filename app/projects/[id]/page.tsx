@@ -91,6 +91,18 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         </div>
       </section>
 
+      {/* Tech Stack */}
+      <section className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-2xl font-bold text-foreground">Tech Stack</h2>
+          <div className="flex flex-wrap gap-3">
+            {project.techStack.map((tech) => (
+              <SkillBadge key={tech} skill={tech} variant="primary" size="md" />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Description */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto glass rounded-lg p-8">
@@ -148,18 +160,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </div>
         </section>
       )}
-
-      {/* Tech Stack */}
-      <section className="px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">Tech Stack</h2>
-          <div className="flex flex-wrap gap-3">
-            {project.techStack.map((tech) => (
-              <SkillBadge key={tech} skill={tech} variant="primary" size="md" />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Navigation */}
       <section className="px-4 sm:px-6 lg:px-8">
