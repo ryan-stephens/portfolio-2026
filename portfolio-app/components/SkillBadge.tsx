@@ -1,5 +1,3 @@
-import { LucideIcon } from 'lucide-react';
-
 interface SkillBadgeProps {
   skill: string;
   variant?: 'default' | 'primary' | 'accent';
