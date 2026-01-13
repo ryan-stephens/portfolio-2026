@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
-import { projects } from '@/content/projects';
+import { getProjectsByCategory } from '@/content/projects';
 
 type Category = 'all' | 'ai-ml' | 'full-stack' | 'hybrid';
 
@@ -16,10 +16,7 @@ export default function ProjectsPage() {
     { id: 'hybrid', label: 'Hybrid' },
   ];
 
-  const filteredProjects =
-    activeCategory === 'all'
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = getProjectsByCategory(activeCategory);
 
   return (
     <div className="space-y-12 pb-20">
