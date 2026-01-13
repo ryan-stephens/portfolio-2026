@@ -4,7 +4,7 @@ version: '3.8'
 services:
   portfolio:
     build:
-      context: .
+      context: ./portfolio-app
       dockerfile: Dockerfile
     container_name: ryan-stephens-portfolio
     restart: unless-stopped
